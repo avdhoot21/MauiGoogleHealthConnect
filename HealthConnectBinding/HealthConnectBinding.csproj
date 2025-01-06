@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net9.0-android</TargetFramework>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
@@ -15,9 +15,33 @@
     -->
   </PropertyGroup>
   <ItemGroup>
+    <AndroidJavaSource Remove="Native\app\build\**" />
+    <AndroidJavaSource Remove="Native\app\release\**" />
+    <AndroidLibrary Remove="Native\app\build\**" />
+    <AndroidLibrary Remove="Native\app\release\**" />
+    <AndroidNativeLibrary Remove="Native\app\build\**" />
+    <AndroidNativeLibrary Remove="Native\app\release\**" />
+    <Compile Remove="Native\app\build\**" />
+    <Compile Remove="Native\app\release\**" />
+    <EmbeddedResource Remove="Native\app\build\**" />
+    <EmbeddedResource Remove="Native\app\release\**" />
+    <JavaSourceJar Remove="Native\app\build\**" />
+    <JavaSourceJar Remove="Native\app\release\**" />
+    <None Remove="Native\app\build\**" />
+    <None Remove="Native\app\release\**" />
+    <ProguardConfiguration Remove="Native\app\build\**" />
+    <ProguardConfiguration Remove="Native\app\release\**" />
+    <TransformFile Remove="Native\app\build\**" />
+    <TransformFile Remove="Native\app\release\**" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidLibrary Remove="connect-client-1.1.0-alpha10.aar" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidExternalJavaLibrary Include="connect-client-1.1.0-alpha10.aar" />
+    <None Remove="Native\local.properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidLibrary Update="Transforms\GoogleConnect-debug.aar" Bind="true">
+    </AndroidLibrary>
   </ItemGroup>
 </Project>
