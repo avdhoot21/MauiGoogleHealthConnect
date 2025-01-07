@@ -1,4 +1,4 @@
-# HealthConnect SDK Integration in .NET MAUI
+# HealthConnect SDK Integration in .NET MAUI (This App is still in Development)
 
 This project demonstrates how to integrate **Google's HealthConnect SDK** into a **.NET MAUI** application using **Java Bindings**. The solution allows you to read and write health-related data such as steps, heart rate, and more, from Android devices.
 
