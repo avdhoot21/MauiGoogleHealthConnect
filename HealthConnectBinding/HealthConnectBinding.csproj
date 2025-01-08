@@ -41,6 +41,9 @@
     <None Remove="Native\local.properties" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Xamarin.AndroidX.Health.Connect.ConnectClient" Version="1.1.0-alpha07" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidLibrary Update="Transforms\GoogleConnect-debug.aar" Bind="true">
     </AndroidLibrary>
   </ItemGroup>

@@ -48,6 +48,16 @@ namespace MauiHealthConnect
         {
             // Request Health Connect permissions
             var healthConnectWrapper = new HealthConnectService(Platform.AppContext);
+            try
+            {
+                var heartRateRecordss = healthConnectWrapper.GetHeartRateRecords();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
             var heartRateRecords = healthConnectWrapper.GetHeartRateRecords();
 
             // If there are records, bind them to the ListView
